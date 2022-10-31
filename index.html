@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>&#9875; Sounds of Alicia &#9875;</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+	<script>
+		function play(button) {
+			console.log(button)
+			const container = button.parentElement
+			const audio = container.getElementsByTagName("audio")[0]
+			const img = container.getElementsByTagName("img")[0]
+			img.classList.add("btn-spin")
+			function stopSpin() {
+				img.classList.remove("btn-spin")
+			}
+			audio.addEventListener('ended', stopSpin);
+			audio.play()
+		}
+	</script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="text-center" id="title"><h1>&#9875; Sounds of Alicia &#9875;</h1></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <audio preload="auto" id="sound1">
+            <source src="aaaah.m4a" type="audio/mp4" />
+          </audio>
+          <button
+            type="button"
+            class="btn btn-lg btn-block"
+            onclick="play(this)"
+          >
+		  <img src="background.png" class="btn-img" />
+            AAAAH
+          </button>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+          <audio preload="auto" id="sound2">
+            <source src="chuckle.m4a" type="audio/mp4" />
+          </audio>
+          <button
+            type="button"
+            class="btn btn-lg btn-block"
+            onclick="play(this)"
+          >
+		  <img src="background.png" class="btn-img" />
+
+            Chuckle
+          </button>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+          <audio preload="auto" id="sound3">
+            <source src="thats%20hilarious.m4a" type="audio/mp4" />
+          </audio>
+          <button
+            type="button"
+            class="btn btn-lg btn-block"
+            onclick="play(this)"
+          >
+		  <img src="background.png" class="btn-img" />
+
+            That's Hilarious
+          </button>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <audio preload="auto" id="sound4">
+            <source src="what%20in%20the%20world.m4a" type="audio/mp4" />
+          </audio>
+          <button
+            type="button"
+            class="btn btn-lg btn-block"
+			onclick="play(this)"
+          >
+		  <img src="background.png" class="btn-img" />
+
+            What in the World?
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

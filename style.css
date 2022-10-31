@@ -1,0 +1,54 @@
+/* settings for tags */
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  background-color: #dcf2ff;
+  margin-bottom: 60px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+h1 {
+  color: #292929;
+  font-size: 4em;
+  margin-bottom: 1em;
+font-family: Palatino;
+font-variant: small-caps; }
+
+.btn {
+  background-color: transparent;
+  color: #292929;
+  border-color: #292929;
+  border: 1px solid;
+  margin-top: 1em;
+
+  display: flex;
+  align-items: center;
+}
+  .btn:hover {
+    background-color: #34495e65;
+     }
+
+  .btn-img {
+    width: 41px;
+    height: 41px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1em;
+  }
+
+  @keyframes spin1 { 100% { transform:rotate(360deg); } }
+
+  .btn-spin {
+    animation: spin1 4s linear infinite;
+  }
+
+.col-xs-6 {
+  margin-bottom: 1em; }
+
+.text {
+  color: #d35400; }
+  .text a {
+    color: #d35400;
+    text-decoration: underline;
+  }
